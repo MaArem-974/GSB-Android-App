@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Retrofit-Kotlin-Coroutines-Example</string>
+    <string name="app_name">GSB Application</string>
+
 </resources>

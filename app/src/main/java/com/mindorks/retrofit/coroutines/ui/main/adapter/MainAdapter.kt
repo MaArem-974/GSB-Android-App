@@ -4,25 +4,37 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.mindorks.retrofit.coroutines.R
 import com.mindorks.retrofit.coroutines.data.model.User
 import com.mindorks.retrofit.coroutines.ui.main.adapter.MainAdapter.DataViewHolder
-import kotlinx.android.synthetic.main.item_layout.view.imageViewAvatar
-import kotlinx.android.synthetic.main.item_layout.view.textViewUserEmail
-import kotlinx.android.synthetic.main.item_layout.view.textViewUserName
+import kotlinx.android.synthetic.main.item_layout.view.*
 
 class MainAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<DataViewHolder>() {
 
+
+
+
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+
+
+
         fun bind(user: User) {
+
             itemView.apply {
-                textViewUserName.text = user.name
-                textViewUserEmail.text = user.email
-                Glide.with(imageViewAvatar.context)
-                    .load(user.avatar)
-                    .into(imageViewAvatar)
+
+
+                textViewNom.text = user.nom
+                textViewPrenom.text = user.prenom
+                textViewID.text = user.idVisiteur
+                textViewEtat.text = user.idEtat
+                textViewMois.text = user.mois
+                textViewNbJust.text = user.nbJustificatifs
+                textViewMontant.text = user.montantValide
+                textViewDate.text = user.dateModif
+
+
+
             }
         }
     }
